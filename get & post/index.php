@@ -6,19 +6,35 @@
     <title>GET & POST</title>
 </head>
 <body>
-    <h1>Formulário de Login</h1>
-    <form action="index.php" method="post">
+    <h1>Pedir Pizza</h1>
+    <!-- <form action="index.php" method="post">
         <label>username:</label><br>
         <input type="text" name="username"><br>
         <label>password:</label><br>
         <input type="password" name="password"><br>
         <input type="submit" value="Entrar"><br>
+    </form> -->
+    <form action="index.php" method="post">
+        <label>quantidade: </label><br>
+        <input type="text" name="quantidade"><br>
+        <input type="submit" value="Total">
     </form>
 </body>
 </html>
 <?php
-    echo "{$_POST["username"]} <br>";
-    echo "{$_POST["password"]} <br>";
+    // echo "{$_POST["username"]} <br>";
+    // echo "{$_POST["password"]} <br>";
+
+    $item = "pizza";
+    $preco = 50;
+    $quantidade = $_POST["quantidade"]; 
+    $total = null;
+
+    $total = $preco * $quantidade;
+
+    echo "Você comprou {$quantidade} {$item}s <br>";
+    echo "No valor de R$ {$total}";
+    
 ?>
 
 <!-- 
