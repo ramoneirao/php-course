@@ -20,3 +20,21 @@
     echo "{$_POST["username"]} <br>";
     echo "{$_POST["password"]} <br>";
 ?>
+
+<!-- 
+$_GET = Dado é  enviado via URL
+        ÑÃO SEGURO 
+        limnite de caracteres 
+        Bookmark é possível com valores 
+        GET request pode ser armazenado 
+        Melhor para a busca de dados
+-->
+
+<!-- 
+$_POST = Dado é guardado no corpo da requisição
+        MAIS SEGURO 
+        Sem limite de caracteres 
+        Bookmark não é possível com valores 
+        POST request não pode ser armazenado 
+        Melhor para o envio de dados
+-->
